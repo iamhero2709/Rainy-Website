@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rain Animation</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: url('./pexels-matreding-5837855.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        .play-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .controls {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body class="flex items-center justify-center min-h-screen bg-gray-900">
+ 
+    <canvas id="rain-canvas" class="absolute inset-0"></canvas>
+    <button id="play-button" class="play-button">Play Rain Sound</button>
+    <audio id="rain-audio" src="./light-rain-109591.mp3" loop></audio>
+    <div class="controls">
+        <button id="toggle-rain">Toggle Rain</button>
+        <input id="volume-control" type="range" min="0" max="1" step="0.1" value="0.5">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
